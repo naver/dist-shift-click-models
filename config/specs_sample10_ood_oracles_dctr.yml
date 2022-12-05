@@ -1,0 +1,34 @@
+seed : 4987
+progress_bar : "False"
+ndcg_eval : "False"
+test : "True"
+
+data_dir : 
+  "mslr/10K/sample10-DBN/" :
+    cm : "DBN"
+    sl : "pair_embedding"
+    oracle : "True"
+    rel_path : "../relevances_sampled.pt"
+  "mslr/10K/sample10-DBN/reverse/" :
+    cm : 
+      "TopPop":
+        sl : "none"
+        mode : "CTR"
+      "DBN":
+        sl : "pair_embedding"
+        oracle : "True"
+        rel_path : "../relevances.pt"
+  "mslr/10K/sample10-CoCM/" :
+    cm : "CoCM"
+    sl : "pair_embedding"
+    rel_path : "../relevances_sampled.pt"
+    device : "cpu"
+  "mslr/10K/sample10-CoCM/reverse/" :
+    cm : 
+      "TopPop":
+        sl : "none"
+        mode : "CTR"
+      "CoCM":
+        sl : "pair_embedding"
+        rel_path : "../relevances.pt"
+        device : "cpu"

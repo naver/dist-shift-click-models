@@ -1,0 +1,54 @@
+data_dir : "yandex/serp_based/"
+progress_bar : "False"
+seed: [4987, 24657, 2021, 300029, 315567, 2451, 3272447, 23577, 3241591, 23444]
+
+max_epochs : 20
+batch_size : 128
+val_check_interval : 8000
+
+
+lr : 0.00005
+
+cm : 
+  "TopPop":
+    sl: "none"
+    mode: 
+      "obs":
+        weighted : "True"
+      "click":
+        weighted : "False"
+      "product":
+        weighted : "False"
+      "CTR":
+        weighted : ["True", "False"]
+        smooth: 1.0
+    test : "True"
+  "PBM":
+    sl : 
+      "immediate":
+        only_query : "True"
+  "UBM":
+    sl : 
+      "immediate":
+        only_query : "True"
+  "DBN":
+    sl : 
+      "immediate":
+        only_query : "True"
+  "NCM":
+    sl : "immediate"
+    only_query : "True"
+  "ARM":
+    sl : 
+      "immediate" :
+        only_query : "True"
+    absolute : "True"
+    relative : "False"
+    non_causal : ["True", "False"]
+  "CACM_minus":
+    sl : 
+      "immediate":
+        only_query : "True"
+
+
+

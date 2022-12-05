@@ -1,0 +1,37 @@
+data_dir : ["rdeffaye/mslr/10K/sample10-DBN/", 
+            "rdeffaye/mslr/10K/sample10-CoCM/"]
+seed : [4987, 24657, 2021, 300029, 315567, 2451, 3272447, 23577, 3241591, 23444]
+progress_bar : "False"
+
+ndcg_eval : "True"
+max_epochs : 20
+val_check_interval : 500
+lr : 0.001
+
+cm : 
+  "TopPop":
+    sl : "none"
+    mode : "CTR"
+    weighted : "False"
+    smooth : 1.0
+    test : "True"
+  "PBM":
+    sl : "immediate"
+    only_query : "True"
+  "UBM":
+    sl : "immediate"
+    only_query : "True"
+  "DBN":
+    sl : "immediate"
+    only_query : "True"
+  "NCM":
+    sl : "immediate"
+    only_query : "True"
+  "ARM":
+    sl : "immediate"
+    only_query : "True"
+    absolute : "True"
+    non_causal : "True"
+  "CACM_minus":
+    sl : "immediate"
+    only_query : "True"

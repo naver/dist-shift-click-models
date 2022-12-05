@@ -1,0 +1,29 @@
+data_dir : [
+            "mslr/10K/DBN-plackettluceoracle/",
+            "mslr/10K/DBN-plackettluce-lambdamart/", 
+            "mslr/10K/DBN-plackettluce-bm25/",
+            "mslr/10K/CoCM-plackettluceoracle/",
+            "mslr/10K/CoCM-plackettluce-lambdamart/", 
+            "mslr/10K/CoCM-plackettluce-bm25/",
+            "mslr/10K/CoCM_mismatch-plackettluceoracle/", 
+            "mslr/10K/CoCM_mismatch-plackettluce-lambdamart/",
+            "mslr/10K/CoCM_mismatch-plackettluce-bm25/"
+          ]
+seed : [4987, 24657, 2021, 300029, 315567, 2451, 3272447, 23577, 3241591, 23444]
+progress_bar : "False"
+
+ndcg_eval : "True"
+max_epochs : 20
+val_check_interval : 500
+sl : "immediate"
+only_query : "True"
+
+cm : 
+  "PBM":
+  "UBM":
+  "DBN":
+  "NCM":
+  "ARM":
+    absolute : "True"
+    non_causal : "False"
+  "CACM_minus":
